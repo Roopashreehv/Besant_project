@@ -29,7 +29,7 @@ function StudentEdit() {
     const sendData = (e) => {
         e.preventDefault()
         const data = { id, name, grade, mobile }
-        fetch("http://localhost:3008/Students/" + studid, {
+        fetch("https://json-rest-api-y046.onrender.com/Students" + studid, {
             method: "PUT",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(data)

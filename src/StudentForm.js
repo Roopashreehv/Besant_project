@@ -14,7 +14,7 @@ function StudentForm() {
     const sendData = (e) => {
         e.preventDefault()
         const data = { id, name, grade, mobile }
-        fetch("http://localhost:3008/Students", {
+        fetch("https://json-rest-api-y046.onrender.com/Students", {
             method: "POST",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(data)

@@ -7,7 +7,7 @@ function StudentDetails() {
     const [data, setData] = useState(null)
     const {studid}=useParams()
     useEffect(() => {
-        fetch("http://localhost:3008/Students/"+studid)
+        fetch("https://json-rest-api-y046.onrender.com/Students"+studid)
             .then((res) => {
                 return res.json()
             })
