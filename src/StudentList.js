@@ -11,7 +11,7 @@ function StudentList() {
     const option=["name","grade","mobile"]
     const [sort,setSort]=useState("")
     useEffect(() => {
-        fetch("http://localhost:3008/Students?_start=${0}&_end$=${3}")
+        fetch("https://json-rest-api-y046.onrender.com/Students?_start=${0}&_end$=${3}")
         .then((res)=>{
             return res.json()
         })
@@ -23,7 +23,7 @@ function StudentList() {
 
     const deleteData = (id) => {
         if (window.confirm("Are you sure to delete the Entry")) {
-            fetch("https://json-rest-api-y046.onrender.com/Students" + id, {
+            fetch("https://json-rest-api-y046.onrender.com/Students/" + id, {
                 method: "DELETE"
             })
                 .then((s) => {
@@ -52,7 +52,7 @@ function StudentList() {
 
     const searchData=async (e)=>{
         e.preventDefault()
-      return await axios.get(`http://localhost:3008/Students?q${value}`)
+      return await axios.get(`https://json-rest-api-y046.onrender.com/Students?q=${value}`)
       .then((res)=>{
         console.log(res)
         setData(res.data)
@@ -62,7 +62,7 @@ function StudentList() {
 
     const loadData=(e)=>{
     e.preventDefault()
-        fetch("http://localhost:3008/Students")
+        fetch("https://json-rest-api-y046.onrender.com/Students")
         .then((res)=>{
             return res.json()
         })
@@ -76,7 +76,7 @@ function StudentList() {
         let value=e.target.value
         console.log(value)
         setSort(value)
-        return await axios.get(`http://localhost:3008/Students?_sort=${value}&_order=asc`)
+        return await axios.get(`https://json-rest-api-y046.onrender.com/Students?_sort=${value}&_order=asc`)
         .then((res)=>{
             console.log(res)
             setData(res.data)
