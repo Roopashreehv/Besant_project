@@ -1,0 +1,26 @@
+/* .a{
+    background-color:aqua;
+} */
+
+/* ul {
+    background-color: aqua;
+    padding: 20px;
+}
+
+ul li {
+    padding: 20px;
+    display: inline;
+} */
+
+/* Map method */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    padding: 20px;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 30px;
+}
