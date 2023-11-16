@@ -23,7 +23,7 @@ function StudentList() {
 
     const deleteData = (id) => {
         if (window.confirm("Are you sure to delete the Entry")) {
-            fetch("https://json-rest-api-y046.onrender.com/Students/" + id, {
+            fetch("https://json-rest-api-y046.onrender.com/Students" + id, {
                 method: "DELETE"
             })
                 .then((s) => {
