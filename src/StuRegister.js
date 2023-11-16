@@ -66,9 +66,9 @@ function StuRegister() {
                     <label className="form-label">Confirm Password</label>
                     <input type="password" value={cpswd} onChange={e => setCpswd(e.target.value)} className="form-control" id="exampleInputPassword1" />
                 </div>
-                <button type="submit" className="btn btn-primary" style={{width:"150px"}}>Submit</button>
+                <button type="submit" className="btn btn-primary" style={{width:"150px"}}>Register</button>
                 <br></br>
-                <Link type="submit" className="btn btn-success" to="/login" style={{width:"150px"}}>Register</Link>
+                // <Link type="submit" className="btn btn-success" to="/login" style={{width:"150px"}}>Register</Link>
               
             </form>
         </div>
