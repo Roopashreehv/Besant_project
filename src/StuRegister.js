@@ -3,7 +3,6 @@ import "./Reg.css"
 import { initializeApp } from "firebase/app";
 import { useState } from "react";
 import {createUserWithEmailAndPassword, getAuth} from "firebase/auth"
-import { Link} from "react-router-dom";
 
 function StuRegister() {
     const [name, setName] = useState("")
@@ -68,8 +67,6 @@ function StuRegister() {
                 </div>
                 <button type="submit" className="btn btn-primary" style={{width:"150px"}}>Register</button>
                 <br></br>
-                // <Link type="submit" className="btn btn-success" to="/login" style={{width:"150px"}}>Register</Link>
-              
             </form>
         </div>
     )
