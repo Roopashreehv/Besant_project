@@ -13,7 +13,7 @@ function StudentEdit() {
     const { studid } = useParams()
 
     useEffect(() => {
-        fetch("https://json-rest-api-y046.onrender.com/Students" + studid)
+        fetch("https://json-rest-api-y046.onrender.com/Students/" + studid)
             .then((res) => {
                 return res.json()
             })
@@ -29,7 +29,7 @@ function StudentEdit() {
     const sendData = (e) => {
         e.preventDefault()
         const data = { id, name, grade, mobile }
-        fetch("https://json-rest-api-y046.onrender.com/Students" + studid, {
+        fetch("https://json-rest-api-y046.onrender.com/Students/" + studid, {
             method: "PUT",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(data)
@@ -65,7 +65,7 @@ function StudentEdit() {
                     <input type="Number" value={mobile} onChange={e => setMobile(e.target.value)} className="form-control" id="exampleInputPassword1" />
                 </div>
                 <button type="submit" className="btn btn-primary">Submit</button>
-                <Link to="/" className="btn btn-danger">Back</Link>
+                <Link to="/list" className="btn btn-danger">Back</Link>
             </form>
         </div>
     )
